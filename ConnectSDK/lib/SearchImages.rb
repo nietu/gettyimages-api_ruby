@@ -4,7 +4,7 @@ class SearchImages < RequestBase
 
 	CONNECT_ROUTE = "/v3/search/images" # mashery endpoint	
 	@@search_route = CONNECT_ROUTE
-	QUERY_PARAMS_NAMES = ["phrase","editorial_segments","graphical_styles","license_models","orientations","exclude_nudity","embed_content_only","page","page_size"]
+	QUERY_PARAMS_NAMES = ["phrase","editorial_segments","graphical_styles","license_models","orientations","exclude_nudity","embed_content_only","page","page_size","sort_order"]
 
 	QUERY_PARAMS_NAMES.each do |key|
     define_method :"with_#{key}" do |value = true| 
